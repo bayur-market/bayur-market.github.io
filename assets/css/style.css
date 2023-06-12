@@ -1,0 +1,268 @@
+/* IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* VARIABLES */
+:root {
+  --green: hsl(101, 46%, 53%);
+  --dark-green: hsl(101, 46%, 33%);
+  --light-green: hsl(101, 46%, 73%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 10%);
+  --gray: hsl(0, 0%, 35%);
+  --dark-gray: hsl(0, 0%, 15%);
+}
+
+/* RESET */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* TAGS */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--black);
+    background-color: var(--white);
+}
+
+section {
+    padding: 40px;
+}
+
+/* HEADER */
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+}
+
+/* HEADER LOGO */
+.header-logo {
+  background-image: url('../img/bg_logo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+.leaves-top {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.leaves-bottom {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.scroll-down {
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  animation: scroll-down-animation 3s infinite;
+}
+
+.scroll-down a {
+  color: var(--white);
+}
+
+@keyframes scroll-down-animation {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 10px);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+/* HEADER BANNER */
+.header-banner {
+  background-color: var(--green);
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ABOUT */
+.about-title {
+  text-align: center;
+}
+
+.about-title img {
+  max-width: 100%;
+}
+
+.about-text {
+  text-align: justify;
+}
+
+/* JOIN */
+.join {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+.join-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.join-title span {
+  display: block
+}
+
+.join-title span:nth-child(2) {
+  font-weight: 500;
+}
+
+.join-subtitle {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.join-form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.join-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--white);
+  color: var(--black);
+  text-align: center;
+  font-family: inherit;
+}
+
+.join-input:focus {
+  outline: none;
+}
+
+.join-input::placeholder {
+  color: var(--gray);
+}
+
+.join-button {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--dark-green);
+  color: var(--white);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.join-button:hover {
+  background-color: var(--light-green);
+}
+
+.join-note {
+  font-size: 12px;
+  text-align: center;
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--dark-gray);
+  color: var(--white);
+  padding: 10px;
+}
+
+footer p {
+  font-size: 12px;
+  text-align: center;
+}
+
+/* DESKTOP BREAKPOINTS */
+@media only screen and (min-width: 720px) {
+  /* TAGS */
+  section {
+    padding: 80px 160px;
+  }
+
+  /* HEADER */
+  .header {
+    grid-template-columns: 3fr 5fr;
+  }
+
+  .leaves-top {
+    top: -20%;
+  }
+
+  .leaves-bottom {
+    bottom: -20%;
+  }
+
+  /* ABOUT */
+  .about-text {
+    font-size: 24px;
+  }
+
+  /* JOIN */
+  .join {
+    padding: 40px 160px;
+  }
+
+  .join-title {
+    font-size: 48px;
+  }
+
+  .join-title span {
+    display: inline;
+  }
+
+  .join-subtitle {
+    font-size: 32px;
+  }
+
+  .join-form {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .join-input {
+    margin: 0 10px;
+  }
+
+  .join-note {
+    font-size: 16px;
+  }
+}
