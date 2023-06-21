@@ -53,14 +53,32 @@
         Bergabung sekarang dan nikmati pengalaman belanja yang aman dan praktis dengan Bayur!
       </p>
     </section>
+    <section id="feature">
+      <h1 class="feature-title">Bagaimana kami bekerja?</h1>
+      <div class="feature-flex">
+        <div class="feature-item">
+          <img src="assets/img/feature_1.png" alt="feature_1">
+          <p class="feature-text">Petani menjual sayuran ke platform Bayur</p>
+        </div>
+        <div class="feature-item">
+          <img src="assets/img/feature_2.png" alt="feature_2">
+          <p class="feature-text">Data jualan sayur masuk ke dalam database Bayur</p>
+        </div>
+        <div class="feature-item">
+          <img src="assets/img/feature_3.png" alt="feature_3">
+          <p class="feature-text">Pelanggan membeli sayuran di platform Bayur</p>
+        </div>
+      </div>
+    </section>
     <section id="join" class="join">
       <h1 class="join-title">
         <span>1280 orang </span>
         <span>telah bergabung</span>
       </h1>
       <p class="join-subtitle">Tertarik dengan Bayur?</p>
-      <form class="join-form" action="">
-        <input class="join-input" type="text" placeholder="Masukkan email / nomor hp anda">
+      <form class="join-form" action="javascript:;" onsubmit="formSubmit(this)">
+        <input class="join-input" type="text" name="name" placeholder="Masukkan nama anda">
+        <input class="join-input" type="text" name="email" placeholder="Masukkan email / nomor hp anda">
         <button class="join-button" type="submit">Kirim</button>
       </form>
       <p class="join-note">
@@ -70,6 +88,9 @@
     <footer class="footer">
       <p>Hak cipta © 2023 Bayur Market Indonesia</p>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
   </main>
 </body>
 </html>
